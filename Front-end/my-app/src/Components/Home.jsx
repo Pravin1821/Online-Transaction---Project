@@ -1,6 +1,10 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
+  const navigate = useNavigate(); 
+
   const features = [
     { icon: "💳", title: "Secure Web Transactions", description: "All transactions are protected with multi-factor verification and encrypted sessions." },
     { icon: "🔐", title: "OTP + PIN Authorization", description: "High-risk transactions require OTP and PIN, ensuring maximum security." },
@@ -25,15 +29,18 @@ const Home = () => {
       <header className="header">
         <h1>SecurePay Web</h1>
         <div>
-          <button>Login</button>
-          <button>Sign Up</button>
+          <button onClick={() => navigate("/login")}>Login</button>
+          <button onClick={() => navigate("/signup")}>Sign Up</button>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="hero">
         <h2>"Secure Your Transactions, Empower Your Web Payments"</h2>
-        <p>Experience a new level of online payment security with OTP, PIN, and intelligent device verification — all in one clean interface.</p>
+        <p>
+          Experience a new level of online payment security with OTP, PIN, and intelligent device verification —
+          all in one clean interface.
+        </p>
       </section>
 
       {/* Features Section */}
@@ -50,7 +57,10 @@ const Home = () => {
       {/* Security Section */}
       <section className="security">
         <h2>Advanced Security</h2>
-        <p>Every login and transaction goes through multiple checks including device recognition, location verification, behavioral analysis, and secure session management.</p>
+        <p>
+          Every login and transaction goes through multiple checks including device recognition, location
+          verification, behavioral analysis, and secure session management.
+        </p>
         <div className="security-cards">
           {securityCards.map((s, idx) => (
             <div key={idx} className="security-card">
@@ -77,12 +87,10 @@ const Home = () => {
       <section className="cta">
         <h2>Get Started Today</h2>
         <p>Sign up now and experience a secure web-based transaction system like never before.</p>
-        <button>Sign Up</button>
+        <button onClick={() => navigate("/signup")}>Sign Up</button>
       </section>
 
-      <footer>
-        &copy; 2025 SecurePay Web. All Rights Reserved.
-      </footer>
+      <footer>&copy; 2025 SecurePay Web. All Rights Reserved.</footer>
     </div>
   );
 };
