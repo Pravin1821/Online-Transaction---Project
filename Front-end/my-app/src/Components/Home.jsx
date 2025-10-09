@@ -19,8 +19,8 @@ const Home = () => {
   ];
 
   const testimonials = [
-    { name: "Ravi K.", feedback: "SecurePay Web made online payments stress-free. Love the device and behavior checks!" },
-    { name: "Anita S.", feedback: "I feel safe knowing every transaction is verified with OTP and PIN." }
+    { name: "Pravin S.", feedback: "SecurePay Web made online payments stress-free. Love the device and behavior checks!" },
+    { name: "Ragul T.", feedback: "I feel safe knowing every transaction is verified with OTP and PIN." }
   ];
 
   return (
